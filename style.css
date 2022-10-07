@@ -1,13 +1,22 @@
 * {
     box-sizing: border-box;
 }
+    :root {
+        --primary: rgb(230, 232, 236);
+        --secondary: rgb(17, 103, 106);
+        --tertiary: rgba(49, 52, 61, 1);
+        --dark: rgba(28, 29, 33, 1);
+        --light: rgba(238, 238, 247, 1);
+      }
+
+
 
 body {
     margin:0%;
     padding:0%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:black;
-    background-color: white;
+    color: var(--dark);
+    background-color:var(--light);
     line-height: 1.5;
 
 }
@@ -19,72 +28,198 @@ h4,
 h5,
 h6 {
     margin: 0%;
-    padding: 5%;
-    text-align: center;
-    font-size: 3vw;
-    text-align: left;
 }
 
 p {
-    margin:0%;
-    padding: 9%;
+    margin: 0
 }
 
 header {
-    background-color: whitesmoke;
-    color: cornflowerblue;
-    width: 100%;
-    padding: 15px 20px;
+    padding: 15px 6% 15px 0;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--light);
+    box-shadow: 0 5px 35px var(--light);
 }
-header .brand {
-    font-size: 3vw;
-    font-weight: bolder;
-   
+header h1 {
+    color: var(--light);
+    background-color: var(--secondary);
+    padding: 5px 1% 5px 6%;
+    margin: 0;
+    font-size: 4vw;
+    line-height: 1;
+}
 
-}
-.banner {
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: bold;
-    display: inline;
-   
-}
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-nav ul {
-    list-style-type: none;
-    margin: 0%;
-    padding: 0%;
-    display: flex;
-}
+
 nav a {
-    font-size: 15px;
-    background-size: 25%;
-    padding: 44%;
-    margin-right:50px
-
-}
-.section {
-    margin: 25px 0px;
-    padding:10px 0px;
-    border-right: 3px;
-    border-left-style: double;
-
-
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--secondary);
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--secondary) 0%, var(--light) 100%);
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25 ease-in;
+    font-size: 1.4rem;
 }
 
+nav a:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.banner {
+    background-position: center;
+    background-color:gray;
+    background-image: url(southbay.jpeg), linear-gradient(180deg,var(--secondary) 0%, var(--primary) 100%);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+   
+}
+.banner div {
+    flex: 0 0 90%;
+}
+.banner h2 {
+    color: var(--light);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 2.3rem;
+    line-height: 1.2;
+    display: inline;
+}
 
 .wrapper {
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    
+}
 
+.section {
+    margin: 25px 0;
+    padding:10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.section h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-left: 15px;
+    border-right: 4px solid var(--primary);
+    font-size: 4vw;
+    line-height: 1.1;
+
+}
+
+.section > div {
+    flex: 0 0 77%;
+}
+
+.section p {
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.flex-items {
+    border: 5px double var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-width: 150px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+
+}
+
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+    background-color: darkcyan;
+}
+
+.flex-item div {
+    background-color: var(--light);
+    padding: 8px 10px;
+}
+
+.flex-item h3 {
+    font-size: 1.6rem;
+}
+
+.contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.contact address a {
+    color: var(--tertiary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-style: normal;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    margin: 0 0.2rem 0.1rem;
+    display: inline-block;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+}
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
 }
