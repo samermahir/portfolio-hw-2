@@ -62,7 +62,7 @@ nav {
 nav a {
     text-decoration: none;
     padding: 5px 10px;
-    color: var(--secondary);
+    color: var(--light);
     margin-right: 10px;
     background-image: linear-gradient(270deg, var(--secondary) 0%, var(--light) 100%);
     background-size: 100% 0.2em;
@@ -81,7 +81,7 @@ main {
 }
 
 .banner {
-    background-position: center;
+    background-position: center center;
     background-color:gray;
     background-image: url(southbay.jpeg), linear-gradient(180deg,var(--secondary) 0%, var(--primary) 100%);
     background-size: cover;
@@ -95,8 +95,19 @@ main {
     text-align: right;
    
 }
-.banner div {
+.banner  div {
+    background-image: url(profile\ picture);
+    background-position: center;
+    background-size: cover;
+    max-width: 18%;
+    max-inline-size: min-content;
+    min-height: inherit;
+    margin-inline-end: auto;
+
     flex: 0 0 90%;
+}
+.banner a {
+    margin: 300%;
 }
 .banner h2 {
     color: var(--light);
